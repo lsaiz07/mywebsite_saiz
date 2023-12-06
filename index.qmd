@@ -16,4 +16,8 @@ Home![](Screenshot%202023-01-03%20at%2012.14.50%20PM.png)
 
 [Past Work](https://lsaiz07.github.io/mywebsite_saiz/past_work.html)
 
+Census Analysis
+
 [Contact info](https://lsaiz07.github.io/mywebsite_saiz/contact_info.html)
+
+Sample Paper
