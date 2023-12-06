@@ -12,8 +12,8 @@ Home![](Screenshot%202023-01-03%20at%2012.14.50%20PM.png)
 
 [Resume](https://github.com/lsaiz07/mywebsite_saiz/blob/main/Untitled%20document%20(1).pdf)
 
-[Sample Paper](https://e2fd95b965fd4e0b905c735994f2d0d4.app.posit.cloud/p/b0770845/)
+[Sample Paper](https://lsaiz07.github.io/mywebsite_saiz/sample_paper.html)
 
-[Past Work](https://e2fd95b965fd4e0b905c735994f2d0d4.app.posit.cloud/p/4b40c705/)
+[Past Work](https://lsaiz07.github.io/mywebsite_saiz/past_work.html)
 
 Contact info
