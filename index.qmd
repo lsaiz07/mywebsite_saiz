@@ -8,7 +8,7 @@ editor: visual
 
 Junior at The George Washington University majoring in Political Science with a minor in Journalism and Mass Communication. I am a hard working and motivated person.
 
-Home![](Screenshot 2023-01-03 at 12.14.50 PM.png)
+Home![](Screenshot%202023-01-03%20at%2012.14.50%20PM.png)
 
 [Resume](https://github.com/lsaiz07/mywebsite_saiz/blob/main/Untitled%20document%20(1).pdf)
 
