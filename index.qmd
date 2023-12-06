@@ -4,15 +4,15 @@ format: html
 editor: visual
 ---
 
-## Quarto
+## About Me
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+Junior at The George Washington University majoring in Political Science with a minor in Journalism and Mass Communication.
 
 Home![](Screenshot 2023-01-03 at 12.14.50 PM.png)
 
-## Running Code
+[Resume](https://github.com/lsaiz07/mywebsite_saiz/blob/main/Untitled%20document%20(1).pdf)
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+[Sample Paper](https://e2fd95b965fd4e0b905c735994f2d0d4.app.posit.cloud/p/b0770845/)
 
 ```{r}
 1 + 1
