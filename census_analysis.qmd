@@ -4,6 +4,10 @@ format: html
 editor: visual
 ---
 
+[HOME](https://lsaiz07.github.io/mywebsite_saiz/)
+
+This analysis employs the TidyCensus package in the "R" programming language to examine census data. The intriguing aspect of this study lies in its focus on the state of Florida, renowned for its remarkably diverse cultural population. This diversity is particularly evident in the substantial Hispanic community residing in South Florida. Furthermore, the state features expansive urban centers along its coasts, juxtaposed with sparsely populated areas in its central region. The analysis delves into the age distribution and language proficiency of each county within the state, shedding light on these demographic characteristics.
+
 ## **Q1** What is the Florida jurisdiction with the lowest median age, according to the ACS 2021 5-year estimates? You will need to find the variable for median age first.
 
 ```         
@@ -38,7 +42,7 @@ md_median_age %>%
 # ℹ 57 more rows
 ```
 
-**Q2** Which Florida counties have a median age of at least 50? You can use the dataframe you just made to answer this, but you must write code to display only those counties with a median age of at least 50.
+**Q2** Which Florida counties have a median age of at least 50?
 
 ```         
 md_median_age %>% 
@@ -60,13 +64,11 @@ md_median_age %>%
 9 12119 Sumter County, Florida       median_age     68.1   0.3
 ```
 
-**Q3** We're interested in knowing which Florida counties have the highest percentage of 5-17 year-olds who speak Spanish at home and *also* speak English fluently. Start with the code you wrote for Q1 and alter it to show the total population of 5-17 year-olds by county. Then create a second dataframe to show the number of 5-17 year-olds by county living in homes where Spanish is spoken but who speak English "very well" according to the ACS. To do this, you will need to find the ACS variables that represent those subjects. HINT: the phrase "very well" shows up in multiple variables - you want the one that doesn't include other factors like citizenship.
+**Q3** We're interested in knowing which Florida counties have the highest percentage of 5-17 year-olds who speak Spanish at home and *also* speak English fluently. Start with the code you wrote for Q1 and alter it to show the total population of 5-17 year-olds by county. Then create a second dataframe to show the number of 5-17 year-olds by county living in homes where Spanish is spoken but who speak English "very well" according to the ACS. To do this, you will need to find the ACS variables that represent those subjects.
 
-For each dataframe, rename the `estimate` column to a meaningful name you've given the ACS variable, remove the `variable` columns in each using select and then join them on GEOID and NAME. Then you can add a column to calculate the percentage of the total 5-17 population that speaks Spanish at home.
+**Which county has the highest percentage of 5-17 year-olds who speak Spanish at home and also speak English very well?**
 
-Which county has the highest percentage of 5-17 year-olds who speak Spanish at home and also speak English very well?
-
-This should be an interesting result as south Florida has a very prominent hispanic population.
+This should be an interesting result as south Florida has a very prominent Hispanic population. It might also be interesting to determine a rural-urban divide as this is usually more evident in big cities such as Miami and Orlando than in smaller rural communities.
 
 ```         
 speak_spanish_5_17 <- get_acs(geography = 'county', 
@@ -106,7 +108,7 @@ speak_spanish_5_17
 
 PUT ANSWER HERE
 
-While this data is not properly arranged as it is lacking the "arrange(desc)" function, it is clear that Baltimore county has the highest percentage of spanish speakers in the age group of 5-17. This result makes sense as it is the largest city in the state which is generally where most immigrants live in. Garrett county has an interestingly low result. However, it is also a very rural county where immigrant families are not likely to live in.
+While this data is not properly arranged as it is lacking the "arrange(desc)" function, it is clear that Alachua county has the highest percentage of spanish speakers in the age group of 5-17. This result makes sense as it is the largest city in the state which is generally where most immigrants live in. Garrett county has an interestingly low result. However, it is also a very rural county where immigrant families are not likely to live in.
 
 **Q5** Pennsylvanians are currently requesting and submitting mail ballots for the November election. You'd like to know more about the people who live in the areas sending in mail ballots. Read in the `zip_totals.csv` file in the data folder containing the number of returned mail ballots per zip code. Then create a dataframe of Pennsylvania ZCTAs that include the following variables from the 2019 ACS: total population and median income. You will need to add `output = "wide"` to the get_acs function so that you get columns for those two variables' estimates and margins of error.
 

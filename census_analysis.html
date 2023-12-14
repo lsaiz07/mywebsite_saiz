@@ -60,6 +60,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p><a href="https://lsaiz07.github.io/mywebsite_saiz/">HOME</a></p>
+<p>This analysis employs the TidyCensus package in the “R” programming language to examine census data. The intriguing aspect of this study lies in its focus on the state of Florida, renowned for its remarkably diverse cultural population. This diversity is particularly evident in the substantial Hispanic community residing in South Florida. Furthermore, the state features expansive urban centers along its coasts, juxtaposed with sparsely populated areas in its central region. The analysis delves into the age distribution and language proficiency of each county within the state, shedding light on these demographic characteristics.</p>
 <section id="q1-what-is-the-florida-jurisdiction-with-the-lowest-median-age-according-to-the-acs-2021-5-year-estimates-you-will-need-to-find-the-variable-for-median-age-first." class="level2">
 <h2 class="anchored" data-anchor-id="q1-what-is-the-florida-jurisdiction-with-the-lowest-median-age-according-to-the-acs-2021-5-year-estimates-you-will-need-to-find-the-variable-for-median-age-first."><strong>Q1</strong> What is the Florida jurisdiction with the lowest median age, according to the ACS 2021 5-year estimates? You will need to find the variable for median age first.</h2>
 <pre><code>md_median_age &lt;- get_acs(geography = 'county', 
@@ -82,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
  9 12003 Baker County, Florida    median_age     37     0.7
 10 12033 Escambia County, Florida median_age     37.5   0.2
 # ℹ 57 more rows</code></pre>
-<p><strong>Q2</strong> Which Florida counties have a median age of at least 50? You can use the dataframe you just made to answer this, but you must write code to display only those counties with a median age of at least 50.</p>
+<p><strong>Q2</strong> Which Florida counties have a median age of at least 50?</p>
 <pre><code>md_median_age %&gt;% 
   filter(estimate &gt; 50)</code></pre>
 <pre><code># A tibble: 9 × 5
@@ -97,10 +99,9 @@ ul.task-list li input[type="checkbox"] {
 7 12085 Martin County, Florida       median_age     52.9   0.3
 8 12115 Sarasota County, Florida     median_age     56.5   0.2
 9 12119 Sumter County, Florida       median_age     68.1   0.3</code></pre>
-<p><strong>Q3</strong> We're interested in knowing which Florida counties have the highest percentage of 5-17 year-olds who speak Spanish at home and <em>also</em> speak English fluently. Start with the code you wrote for Q1 and alter it to show the total population of 5-17 year-olds by county. Then create a second dataframe to show the number of 5-17 year-olds by county living in homes where Spanish is spoken but who speak English "very well" according to the ACS. To do this, you will need to find the ACS variables that represent those subjects. HINT: the phrase "very well" shows up in multiple variables - you want the one that doesn't include other factors like citizenship.</p>
-<p>For each dataframe, rename the <code>estimate</code> column to a meaningful name you've given the ACS variable, remove the <code>variable</code> columns in each using select and then join them on GEOID and NAME. Then you can add a column to calculate the percentage of the total 5-17 population that speaks Spanish at home.</p>
-<p>Which county has the highest percentage of 5-17 year-olds who speak Spanish at home and also speak English very well?</p>
-<p>This should be an interesting result as south Florida has a very prominent hispanic population.</p>
+<p><strong>Q3</strong> We’re interested in knowing which Florida counties have the highest percentage of 5-17 year-olds who speak Spanish at home and <em>also</em> speak English fluently. Start with the code you wrote for Q1 and alter it to show the total population of 5-17 year-olds by county. Then create a second dataframe to show the number of 5-17 year-olds by county living in homes where Spanish is spoken but who speak English “very well” according to the ACS. To do this, you will need to find the ACS variables that represent those subjects.</p>
+<p><strong>Which county has the highest percentage of 5-17 year-olds who speak Spanish at home and also speak English very well?</strong></p>
+<p>This should be an interesting result as south Florida has a very prominent Hispanic population. It might also be interesting to determine a rural-urban divide as this is usually more evident in big cities such as Miami and Orlando than in smaller rural communities.</p>
 <pre><code>speak_spanish_5_17 &lt;- get_acs(geography = 'county', 
                               variables = c(speak_spanish_5_17 = 'B16004_005'), 
                               state = 'FL', 
@@ -123,17 +124,17 @@ ul.task-list li input[type="checkbox"] {
  9 12017 Citrus County, Florida                   667   287
 10 12019 Clay County, Florida                    1425   404
 # ℹ 57 more rows</code></pre>
-<p><strong>Q4</strong> Given the counties with the largest percentage of 5-17 year-olds that speak Spanish at home, which county stands out to you in the data as different from the others? How would you describe the top 5 counties? How would you describe Alachua County's numbers?</p>
+<p><strong>Q4</strong> Given the counties with the largest percentage of 5-17 year-olds that speak Spanish at home, which county stands out to you in the data as different from the others? How would you describe the top 5 counties? How would you describe Alachua County’s numbers?</p>
 <p>PUT ANSWER HERE</p>
-<p>While this data is not properly arranged as it is lacking the "arrange(desc)" function, it is clear that Baltimore county has the highest percentage of spanish speakers in the age group of 5-17. This result makes sense as it is the largest city in the state which is generally where most immigrants live in. Garrett county has an interestingly low result. However, it is also a very rural county where immigrant families are not likely to live in.</p>
-<p><strong>Q5</strong> Pennsylvanians are currently requesting and submitting mail ballots for the November election. You'd like to know more about the people who live in the areas sending in mail ballots. Read in the <code>zip_totals.csv</code> file in the data folder containing the number of returned mail ballots per zip code. Then create a dataframe of Pennsylvania ZCTAs that include the following variables from the 2019 ACS: total population and median income. You will need to add <code>output = "wide"</code> to the get_acs function so that you get columns for those two variables' estimates and margins of error.</p>
+<p>While this data is not properly arranged as it is lacking the “arrange(desc)” function, it is clear that Alachua county has the highest percentage of spanish speakers in the age group of 5-17. This result makes sense as it is the largest city in the state which is generally where most immigrants live in. Garrett county has an interestingly low result. However, it is also a very rural county where immigrant families are not likely to live in.</p>
+<p><strong>Q5</strong> Pennsylvanians are currently requesting and submitting mail ballots for the November election. You’d like to know more about the people who live in the areas sending in mail ballots. Read in the <code>zip_totals.csv</code> file in the data folder containing the number of returned mail ballots per zip code. Then create a dataframe of Pennsylvania ZCTAs that include the following variables from the 2019 ACS: total population and median income. You will need to add <code>output = "wide"</code> to the get_acs function so that you get columns for those two variables’ estimates and margins of error.</p>
 <p>Join the ZCTA dataframe to the zip totals dataframe and calculate a per capita rate for mail ballots per 100 population in each ZCTA, and write code to answer the following questions?</p>
 <ul>
 <li><p>Which zip code <em>that has returned at least 100 mail ballots</em> has the highest per capita rate?</p></li>
 <li><p>Where is that zip code and what does Census Reporter say about its demographics?</p></li>
 <li><p>For zip codes with a per capita rate of at least 10 returned ballots per 100 people, how many have median incomes of at least $100,000?</p></li>
 <li><p>How many have median incomes less than the state figure of $68,957?</p></li>
-<li><p>What's the most interesting one from this last result?</p></li>
+<li><p>What’s the most interesting one from this last result?</p></li>
 </ul>
 <pre><code>zip_totals &lt;- read_csv("data/pa_zip_totals.csv")</code></pre>
 <pre><code>Rows: 5181 Columns: 2
