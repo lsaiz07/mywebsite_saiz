@@ -4,6 +4,8 @@ format: html
 editor: visual
 ---
 
+[HOME](https://lsaiz07.github.io/mywebsite_saiz/)
+
 ## Past Work
 
 This is a paper about the 2022 Florida Gubernatorial Race
