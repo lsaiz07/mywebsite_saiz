@@ -4,6 +4,8 @@ format: html
 editor: visual
 ---
 
+[HOME](https://lsaiz07.github.io/mywebsite_saiz/)
+
 This is a paper about the role of media in American politics.
 
 ## It is difficult to find a country in the world where the media has more importance than it does in the United States. The institution is protected by the most sacred legal document, The Constitution, and it has many important roles in safeguarding American democracy. For a large part of history, the media was a partisan institution ran by party bosses who used newspapers to promote their opinions. When the penny press was rolled out, this changed. In an attempt to expand audience, news organizations began taking unbiased stances on policy focusing on objectivity and facts. Fast forward a century and there is a nearly record low trust in media at around 34% according to Gallup. The polls shows that only 7% of Americans have "a great deal" of trust and confidence in the media and about 38% have "none at all". This can be attributed to many factors, but one is chief amongst all, the notion that there is a "liberal bias" in the media.
